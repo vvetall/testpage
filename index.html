@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="style.css"/>
+        <!-- подключили font с google и поменяли в scc(body) на "open sans" и цвета еще -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+        <title>Вторая стрница верстки</title>
+    </head>
+    <body>
+        <header class="topheader">
+            <div class="center-block-main">
+                <a href="#"><img src="images/logo.jpg" alt="Blogin." class="logo"></a>
+                <nav>
+                    <ul class="menu-header"> <!-- такой класс так <ul> еще будет у нас в верстке-->
+                        <li><a href="#">Блог</a></li>
+                        <li><a href="#">О нас </a></li>
+                        <li><a href="#">Работа</a></li>
+                        <li><a href="#">Контакты</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <!-- главный блок блога -->
+        <div class="center-block-main iborder">
+            <main>
+                <article>
+                    <!-- делаем тоже хедер, но у страрого хэдера есть бордер и его для этого хэдэра надо отменить -->
+                    <header class="articleheader">
+                        <img src="images/img1.jpg" alt="">
+                    </header>
+                    <h2> Lorem ipsum dolor sit amet, consectetur </h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, iste eveniet amet dolor quo ab fuga illo, illum adipisci eaque </p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta optio architecto quidem quo voluptatibus perferendis animi exercitationem commodi, dolore laboriosam dignissimos, repellat ullam similique placeat reiciendis sit ipsam. Officia, nesciunt?</p>
+                    <p><a href="#" class="moreButton">Читать продолжение</a></p>
+                </article>
+                <article>
+                    <!-- второй блок делаем тупо скопиров весь article -->
+                    <header class="articleheader">
+                        <img  src="images/img2.jpg" alt="" >
+                    </header>
+                    <h2> Lorem ipsum dolor sit amet, consectetur </h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, iste eveniet amet dolor quo ab fuga illo, illum adipisci eaque </p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta optio architecto quidem quo voluptatibus perferendis animi exercitationem commodi, dolore laboriosam dignissimos, repellat ullam similique placeat reiciendis sit ipsam. Officia, nesciunt?</p>
+                    <p><a href="#" class="moreButton">Читать продолжение</a></p>
+                </article>
+            </main>
+            <aside>
+                <div class="widget">
+                    <h2>Поиск</h2>
+                    <!-- делаем форму поиска -->
+                    <form action="" method="get"> 
+                        <input type="search" class="search" placeholder="Что вы хотите найти?"> 
+                    </form>
+                </div>
+                <div class="widget">
+                    <h2>Категории</h2>
+                    <nav>
+                        <ul>
+                            <li> <a href="#">Выходные</a> </li>
+                            <li> <a href="#"> Природа</a> </li>
+                            <li> <a href="#">Работа</a> </li>
+                            <li> <a href="#">Праздники</a> </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="widget">
+                    <!-- делаем форму для подписки @  -->
+                    <h2>Подпишитесь на рассылку</h2>
+                    <div class="subscribe">
+                        <form action="" mathod="get">
+                            <input type="email" placeholder="Ваша почта" class="subscribe-input">
+                            <input type="image" src="images/sbcr-btn.jpg" class="subscribe-img"> 
+                        </form>
+                    </div>
+                </div>
+                <div class="widget">
+                    <img src="images/banner.jpg" alt="">
+                </div>
+            </aside>
+            <!-- clr отменяет обтекание, иначе pager заполняет место между content и aside -->
+            <div class="clr">
+                <!-- добавляем класс клеарфик чтоб границы не схлопывались -->
+                <div class="pager clearfix">
+                    <p class="prev-link" >&larr; <a href="#">ПРОШЛАЯ</a></p>
+                    <p class="next-link"><a href="#">СЛЕДУЮЩАЯ</a> &rarr;</p>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <!-- тот же класс что и в хэдере -->
+            <div class="center-block-main">
+                <a href="#"><img src="images/logo-ftr.jpg" alt=""></a>
+                <p>Всякая инфа о блоге</p>
+            </div>
+
+        </footer>
+    </body>
+
+</html>

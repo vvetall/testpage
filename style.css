@@ -1,0 +1,247 @@
+/* --------------- reset.css --------------- */
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, em, img, strong, sub, sup, b, u, i,  dl, dt, dd, ol, ul, li, fieldset, form, label, table, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;                               /* обнуляем отступы и убираем бордюры */
+	vertical-align: baseline;          /* приводим все к одной базовой линии */
+	background: transparent;      /* чтобы не проскакивали левые фоны, установленные по умолчанию */
+	font-size: 100%;                     /* размер шрифта всем одинаковый */
+}
+a {                                      	     /* ссылка не в общем списке чтобы не сбрасывать outline по умолчанию */
+	margin:0;
+	padding:0;
+	font-size:100%;
+	vertical-align:baseline;
+	background:transparent;
+	outline:none;
+}
+table {						/* устраняем отступы между ячейками таблицы */
+	border-collapse: collapse; 
+	border-spacing: 0;
+}
+td, td img {
+	vertical-align: top;			/* возвращаем привычное вертикальное выравнивание */
+} 
+input, select, button, textarea {
+	margin: 0; 				/* убираем отступы по умолчанию для элементов форм (в частности для checkbox и radio) */
+	font-size: 100%; 			/* делаем размер шрифтов везде одинаковым */
+	outline: none;
+}
+input[type="text"], input[type="password"], textarea {
+	padding: 0; 				/* убираем внутренние отступы для текстовых полей */
+}
+input[type="checkbox"] { 		/* вертикальное выравнивание чекбоксов и радиобатонов относительно меток */
+	vertical-align: bottom;
+}
+input[type="radio"] {
+	vertical-align: text-bottom;
+}
+sub {
+	vertical-align: sub;
+	font-size: smaller;
+}
+sup {
+	vertical-align: super;
+	font-size: smaller;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display:block;
+}
+nav ul {
+	 list-style:none;
+}
+/* --------------- /reset.css --------------- */
+
+/* --------------- базовые настройки ---------*/
+html {
+	min-height:100%; /* всегда показываем вертикальную полосу прокрутки  */
+}
+body {
+	color: #606060;
+	text-align: left;
+	font-size: 1em; /* используем безопасные шрифтовые CSS стеки */
+	min-height:100%;
+    font-family: 'Open Sans', sans-serif;
+}
+a, a:visited { /* порядок правил для ссылок имеет значение */
+	color: #339933;
+	text-decoration: underline;
+}
+a:hover {
+	color: #339933;
+	text-decoration:none;
+}
+a:focus, a:active {
+	color: #339933;
+	text-decoration: underline;
+}
+h1, h2, h3, h4, h5, h6{
+	font-weight:normal;
+}
+img{
+
+	max-width:100%;
+}
+.clr{
+	clear:both;
+}
+.clearfix:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+/* --------------- /базовые настройки ---------*/
+header.topheader{
+    background: #292929;
+    overflow: hidden;/* этот оверфлоу относится к .logo, .menu-header. без него background пропадет */
+}
+    .center-block-main{
+        margin: 0 auto;
+        max-width: 990px;
+    }
+    .logo{
+        float: left;
+        margin-top: 10px;
+    }
+    .menu-header{
+        float: right;
+    }
+    .menu-header li{
+        float: left;
+        font-weight: 600;
+    }
+    .menu-header li a{
+        color:#fff;
+        text-decoration: none;
+        padding: 15px 50px;
+        display: block;/*ссылка это строчный эл-т, а нам нужен блочный, поэтому падинг свеху не назначался*/
+        border: 1px solid #1b1b1b;
+        border-bottom: 7px solid #1b1b1b;/* делаем чтоб не было скачков при наведении(hover)*/
+    }
+    .menu-header li a:hover{/* делаем зеленую границу принаведении*/
+        color: #339933;
+        border-bottom: 7px solid #339933;
+    }
+main{
+    float:left;
+    width: 62.5%;
+    margin-top: 70px;
+}
+.iborder{
+    border-left: #bcbbbb 1px solid;
+    border-right: #bcbbbb 1px solid;
+    box-sizing: border-box;
+}
+    article{
+        margin-bottom: 70px;
+    }
+    header.articleheader{
+        margin-bottom: 10px;
+    }
+    article h2{
+        margin:0 0 40px 20px;
+        /* по стандарту из reset.css font-size 100% и 1em( это 16px) нам надо 28px - это 1.75em */
+        font-size: 1.75em;
+        text-transform: uppercase;
+        font-weight: 600;
+        line-height: 1.1;
+        color:#4f4e4e;
+    }
+    article p{
+        margin: 0 0 20px 20px;
+        line-height: 1.2;
+    }
+    a.moreButton{
+        border:#292929 solid 2px;
+        border-radius: 30px;
+        background-color: none;
+        padding: 7px 10px 9px 10px;
+        text-decoration: none;
+        display: inline-block;
+    }
+    a.moreButton:hover{
+        background-color: #339933;
+        color: #fff;    
+    }
+
+aside{
+    float:right;
+    width: 28.3%;
+    margin-top: 70px;
+}
+    .widget{
+        margin-bottom: 40px;
+    }
+    .widget h2{
+        text-transform: uppercase;
+        color:#6c6969;
+        background-color: #f8f8f8;
+        border-left: #339933 3px solid;
+        padding: 10px 20px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+    .search{
+        color:#b9b9b9;
+        font-size: 0,75em;
+        width:100%;
+        border:#b9b9b9 1px solid;
+        border-right: none;
+        padding: 15px 20px;
+    }
+    .widget nav{
+        margin-left: 20px;
+    }
+    .subscribe{
+        /* заворачиваем картинку и почту в один тэг subscribe для дальнейшего позиционирования */
+        position: relative;
+        width:100%;
+        /* это чтоб отступы были,без него реклама будет близко */
+        height: 48px;
+    }
+    .subscribe-input{
+        color:#b9b9b9;
+        font-size: 0,75em;
+        width:100%;
+        border:#b9b9b9 1px solid;
+        border-right: none;
+        padding: 15px 50px 15px 20px;
+        /* делает 100% размер контейнера вместе с бордер.т.е. бордер входит в 100% */
+        box-sizing: border-box;
+        position: absolute;
+        top:0; left:0;
+    }
+    .subscribe-img{
+        /* кнопка прячется за плашкой почты и поэтому ее надо передвинуть */
+        position: absolute; right: 20px; top: 12px;
+    }
+    .pager{
+        border-top: #606060 1px solid;
+        font-size: 1.125em; 
+        text-transform: uppercase;
+        font-weight: bold;
+        padding: 30px;
+    
+    }
+    .pager a{
+        color:#4f4e4e;
+        text-decoration: none;
+    }
+    .pager a:hover{
+        text-decoration:underline;
+    }
+    .prev-link{
+        float: left;
+    }
+    .next-link{
+        float: right;
+    }
+footer{
+    border-top: 2px #d0cece solid;
+    background-color: #f8f8f8;
+    text-align: center; 
+    font-size: 0.81em;
+    padding: 50px 0;
+}
+
